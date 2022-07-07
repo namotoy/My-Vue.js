@@ -1,0 +1,22 @@
+body{
+font-size: 16px;
+font-family: Verdana, sans-serif;
+}
+
+.container{
+  width:300px;
+  margin:auto;
+}
+
+#app h1{
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding:20px 0;
+}
+
+#app li{
+  line-height: 2.0;
+}
+#app input[type="text"]{
+  padding:4px;
+}
