@@ -20,3 +20,9 @@ font-family: Verdana, sans-serif;
 #app input[type="text"]{
   padding:4px;
 }
+
+.command{
+  font-size:12px;
+  cursor: pointer;
+  color: tomato
+}

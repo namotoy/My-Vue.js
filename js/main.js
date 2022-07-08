@@ -15,6 +15,11 @@ var vm = new Vue({
     addItem:function(){
       this.todos.push(this.newItem);
       this.newItem = '';
+    },
+    deleteItem:function(index){
+      if (confirm('本当にいいですか?')){
+        this.todos.splice(index,1);
+      }
     }
   }
 });
