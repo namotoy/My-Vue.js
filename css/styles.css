@@ -26,3 +26,13 @@ font-family: Verdana, sans-serif;
   cursor: pointer;
   color: tomato
 }
+
+#app ul{
+  padding:0;
+  list-style: none;
+}
+
+#app li > span.done {
+  text-decoration: line-through;
+  color: #bbb;
+}

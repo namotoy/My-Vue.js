@@ -5,15 +5,24 @@ var vm = new Vue({
   data: {
     newItem:'',
     // name: 'namoto'
-    todos: [
-      'task 1',
-      'task 2',
-      'task 3'
-    ]
+    todos: [{
+      title: 'task 1',
+      isDone: true
+    },{
+      title: 'task 2',
+      isDone: true
+    },{
+      title: 'task 3',
+      isDone: false
+  }]
   },
   methods: {
     addItem:function(){
-      this.todos.push(this.newItem);
+      var item={
+        title: this.newItem,
+        isDone:false
+      };
+      this.todos.push(item);
       this.newItem = '';
     },
     deleteItem:function(index){
