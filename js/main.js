@@ -4,17 +4,17 @@ var vm = new Vue({
   el:"#app",
   data: {
     newItem:'',
-    // name: 'namoto'
-    todos: [{
-      title: 'task 1',
-      isDone: true
-    },{
-      title: 'task 2',
-      isDone: true
-    },{
-      title: 'task 3',
-      isDone: false
-  }]
+  //   todos: [{
+  //     title: 'task 1',
+  //     isDone: true
+  //   },{
+  //     title: 'task 2',
+  //     isDone: true
+  //   },{
+  //     title: 'task 3',
+  //     isDone: false
+  // }]
+  todos:[]
   },
   methods: {
     addItem:function(){

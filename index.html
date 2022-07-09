@@ -9,14 +9,17 @@
 
   <div id ="app" class="container">
     <h1>To do リスト</h1>
-    <ul>
+    <ul  v-if="todos.length">
       <li v-for="(todo,index) in todos">
         <input type="checkbox" v-model="todo.isDone">
         <span v-bind:class="{done: todo.isDone}">
         {{ todo.title }}</span>
         <span @click="deleteItem(index)" class="command">[x]</span>
       </li>
-
+    </ul>
+      <!-- <li v-show="!todos.length">Nothing to do, yeah!</li> -->
+    <ul v-else>
+      <li >何もありません！</li>
     </ul>
     <!-- <form v-on:submit="addItem"> -->
     <form @submit.prevent="addItem">
