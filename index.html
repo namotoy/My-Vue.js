@@ -8,7 +8,10 @@
 <body>
 
   <div id ="app" class="container">
-    <h1>To do リスト</h1>
+    <h1>
+      To do リスト
+      <span class="info">({{remaining}}/{{todos.length}})</span>
+    </h1>
     <ul  v-if="todos.length">
       <li v-for="(todo,index) in todos">
         <input type="checkbox" v-model="todo.isDone">
