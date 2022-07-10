@@ -28,14 +28,25 @@ var vm = new Vue({
       if (confirm('本当にいいですか?')){
         this.todos.splice(index,1);
       }
+    },
+    purge:function(){
+      if (!confirm('消去を完了しますか？')){
+        return;
+      }
+      // this.todos = this.todos.filter(function(todo){
+      //   return !todo.isDone;
+      // });
+      this.todos = this.remaining;
     }
   },
   computed: {
     remaining: function(){
-      var items = this.todos.filter(function(todo){
+      // var items = this.todos.filter(function(todo){
+      //   return !todo.isDone;
+      // });
+      return this.todos.filter(function(todo){
         return !todo.isDone;
       });
-      return items.length;
     }
   }
 });

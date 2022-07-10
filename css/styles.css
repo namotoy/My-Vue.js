@@ -42,3 +42,7 @@ font-family: Verdana, sans-serif;
   font-size:12px;
   font-weight: normal;
 }
+
+#app h1 > button {
+  float:right;
+}
