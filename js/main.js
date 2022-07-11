@@ -15,9 +15,22 @@ var vm = new Vue({
       isDone: false
   }]
   },
+  watch: {
+    // todos: function(){
+    //   localStorage.setItem('todos', JSON.stringify(this.todos));
+    //   alert('データを保存しました');
+    // }
+    todos: {
+      handler: function(){
+        localStorage.setItem('todos',JSON.stringify(this.todos));
+        // alert('データを保存しました');
+      },
+      deep:true
+    }
+  },
   methods: {
     addItem:function(){
-      var item={
+      var item = {
         title: this.newItem,
         isDone:false
       };
