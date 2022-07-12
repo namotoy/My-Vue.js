@@ -19,6 +19,7 @@ font-family: Verdana, sans-serif;
 }
 #app input[type="text"]{
   padding:4px;
+  margin-bottom: 10px;
 }
 
 .command{
