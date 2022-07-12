@@ -18,6 +18,7 @@ var likeComponent = Vue.extend({
   methods: {
     countUp: function(){
       this.count++;
+      this.$emit('increment');
     }
   }
   });
@@ -30,6 +31,7 @@ var vm = new Vue({
   },
 
   data: {
+    total: 0,
     newItem:'',
     todos: [
   //     {
@@ -62,6 +64,9 @@ mounted: function(){
 },
 
   methods: {
+    incrementTotal: function(){
+      this.total++;
+    },
     addItem:function(){
       var item = {
         title: this.newItem,

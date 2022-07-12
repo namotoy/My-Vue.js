@@ -30,11 +30,11 @@
       <input type = "text" v-model="newItem">
       <input type = "submit" value="Add">
     </form>
-
-    <like-component message="いいね"></like-component>
-    <like-component message="最高！"></like-component>
-    <like-component message="ありがとう"></like-component>
-    <like-component></like-component>
+    <p>評価数の合計: {{total}}</p>
+    <like-component message="いいね" @increment="incrementTotal"></like-component>
+    <like-component message="最高！"@increment="incrementTotal"></like-component>
+    <like-component message="ありがとう"@increment="incrementTotal"></like-component>
+    <like-component @increment="incrementTotal"></like-component>
 
     <!-- <p>Hello {{ name.toUpperCase() }}!!</p>
     <p><input type= "text" v-model="name"></p> -->
